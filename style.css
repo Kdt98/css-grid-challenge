@@ -1,0 +1,111 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    border-radius: 12px;
+    
+    font-family: 'Barlow Semi Condensed';
+}
+body{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.container{
+    max-width: 1100px;
+    display: grid;
+    background-color: hsl(210, 46%, 95%);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "test1 test1 test2 test5" "test3 test4 test4 test5";
+    grid-gap: 2rem;
+    margin: auto;
+    padding: 50px;
+    
+
+}
+.name{
+    display:flex;
+}
+.name img{
+    border-radius: 50%;
+    transform: scale(0.7);
+    
+}
+.name-text{
+    padding-top: 0.8rem;
+    padding-left: 0.5rem;
+}
+.review_para{
+    font-weight: 600;
+    font-size: 19px;
+    margin-bottom: 3%;
+    margin-top: 1.25%;
+}
+.test1{
+    background:url(./images/bg-pattern-quotation.svg) right 100px top no-repeat , hsl(263, 55%, 52%);
+    color: white;
+    grid-area: test1;
+    padding: 18px 32px;
+    box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.2);
+
+}
+.test1 img{
+    border: solid hsl(263, 36%, 62%);
+}
+.test4 img{
+    border: solid hsl(263, 36%, 62%);
+}
+.test2{
+    background-color:  hsl(217, 19%, 35%);
+    color: white;
+    grid-area: test2;
+    padding: 18px 32px;
+    box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.2);
+}
+.test3{
+    background-color: hsl(0, 0%, 100%);
+    grid-area: test3;
+    color: hsl(217, 19%, 35%);
+    padding: 36px;
+    box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.2);
+}
+.test4{
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+    grid-area: test4;
+    padding: 32px;
+    box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.2);
+    
+}
+.test5{
+    background-color: hsl(0, 0%, 100%);
+    grid-area: test5;
+    color: hsl(217, 19%, 35%);
+    padding: 18px 32px;
+    box-shadow: 1px 1px 50px 0px rgba(0, 0, 0, 0.2);
+}
+
+@media only screen and (max-width: 375px){
+   
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.5fr 0.5fr 1fr 1fr;
+        grid-template-areas: "test1" "test2" "test3" "test4" "test5" ;
+  
+    } 
+    .review_para{
+        font-size: 16.5px;
+    }
+    .para{
+        font-size: smaller;
+    }
+    .test1{
+        background:url(./images/bg-pattern-quotation.svg) right top no-repeat , hsl(263, 55%, 52%);
+       
+    
+    }
+}
